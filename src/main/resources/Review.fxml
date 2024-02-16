@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane prefHeight="812.0" prefWidth="375.0" style="-fx-background-color: #0C0D0D;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ispw.graphic_controller.GUIReviewController">
+   <children>
+      <Label layoutX="30.0" layoutY="55.0" text="Add your rating" textFill="WHITE">
+         <font>
+            <Font name="SF Pro Display Semibold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="25.0" layoutY="91.0" prefHeight="65.0" prefWidth="316.0" style="-fx-control-inner-background: #0C0D0D; -fx-background-color: -fx-control-inner-background;" stylesheets="@style.css" text="Rate the episode by 1-5 stars and add a written opinion to enhance your thoughts about the episode." wrapText="true">
+         <font>
+            <Font name="SF Pro Display Medium" size="13.0" />
+         </font></TextArea>
+      <TextArea fx:id="reviewText" layoutX="25.0" layoutY="283.0" prefHeight="303.0" prefWidth="316.0" promptText="Write your opinion.." style="-fx-control-inner-background: #28282B; -fx-prompt-text-fill: white; -fx-background-radius: 0; -fx-text-box-border: transparent; -fx-faint-focus-color: transparent; -fx-focus-color: transparent;" stylesheets="@style.css" wrapText="true">
+         <font>
+            <Font name="SF Pro Display Regular" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow radius="14.4225" spread="0.09" width="38.69">
+               <color>
+                  <Color red="0.17000000178813934" green="0.16830000281333923" blue="0.16830000281333923" opacity="0.8336520195007324" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextArea>
+      <Button fx:id="submit" layoutX="282.0" layoutY="613.0" mnemonicParsing="false" onAction="#buildReview" style="-fx-background-color: #28282B;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="SF Pro Display Semibold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.1568627506494522" green="0.1568627506494522" blue="0.16862745583057404" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Rating fx:id="rating" layoutX="26.0" layoutY="240.0" prefHeight="34.0" rating="0.0" updateOnHover="true" />
+      <Button fx:id="hideBttn" layoutX="8.0" layoutY="10.0" mnemonicParsing="false" onAction="#hidePage" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/down-arrow.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

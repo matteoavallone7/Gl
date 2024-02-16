@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ispw.graphic_controller.GUINewsManager">
+   <children>
+      <TextArea fx:id="textArea" editable="false" layoutX="14.0" layoutY="243.0" prefHeight="90.0" prefWidth="280.0" style="-fx-background-color: transparent;" text="My understanding is this is making it so I can't focus on it (like tab to the container or click into it), its not editable (so I can't change the text by typing), and it starts invisible. I've tried setting focusTraversable to true with no change of behavior.&#10;&#10;In my controller, I set the visibility to true when a button is clicked then get some string data from a db, format it a certain way, then do this to set the content of the TextArea." wrapText="true">
+         <font>
+            <Font name="SF Pro Display Regular" size="13.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="date" layoutX="15.0" layoutY="22.0" text="Date" textFill="#837c7c">
+         <font>
+            <Font name="SF Pro Rounded Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="account" layoutX="15.0" layoutY="7.0" text="TV Official Account" textFill="#3c0b61">
+         <font>
+            <Font name="SF Pro Rounded Bold" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="60.0" maxHeight="180.0" maxWidth="270.0" prefHeight="180.0" prefWidth="280.0">
+         <children>
+            <ImageView fx:id="img" fitHeight="180.0" fitWidth="280.0" pickOnBounds="true">
+               <effect>
+                  <DropShadow spread="0.07">
+                     <color>
+                        <Color red="0.32894736528396606" green="0.3152412176132202" blue="0.3152412176132202" opacity="0.7799999713897705" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="title" layoutX="15.0" layoutY="37.0" text="Title" textFill="#3c3a3a">
+         <font>
+            <Font name="SF Pro Rounded Heavy" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

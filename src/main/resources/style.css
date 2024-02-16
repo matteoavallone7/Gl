@@ -1,0 +1,112 @@
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #4c4254;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-family: "SF Pro Display";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ebce3d;
+}
+
+.text-area .content {
+    -fx-background-radius: 0 ;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #A8BFFF;
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #c0c6d1;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ac9bcf;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-text-fill: white;
+}
+
+.table-view .scroll-bar * {
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
+
+.scroll-bar:vertical .track-background,
+.scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 2em;
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 15.0 0.0 0.0;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+.scroll-bar{
+    -fx-background-color: transparent;
+    -fx-background-radius: 2em;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: -1.4, 0, 1, 2;
+}
+
+.scroll-bar:vertical:focused {
+    -fx-background-color: transparent;
+}
+
+

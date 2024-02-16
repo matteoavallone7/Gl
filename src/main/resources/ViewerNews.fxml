@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="812.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ispw.graphic_controller.GUIViewerNewsController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="375.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="-2.0">
+         <children>
+            <Label text="Latest News">
+               <font>
+                  <Font name="SF Pro Display Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/newsicon.png" />
+               </image>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.3126705586910248" green="0.08576998114585876" blue="0.8421052694320679" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow height="41.64" radius="15.16">
+               <color>
+                  <Color opacity="0.4512428343296051" />
+               </color>
+            </DropShadow>
+         </effect>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e2e4" height="64.0" layoutY="757.0" opacity="0.62" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 30; -fx-arc-height: 20;" width="375.0" />
+      <Button fx:id="watchlist" layoutX="29.0" layoutY="760.0" mnemonicParsing="false" onAction="#showWatchlist" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/tvicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="search" layoutX="120.0" layoutY="766.0" mnemonicParsing="false" onAction="#toSearchSection" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/500px-Search_Icon.svg.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="home" layoutX="211.0" layoutY="763.0" mnemonicParsing="false" onAction="#toHomepage" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Home_icon_black.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="news" layoutX="289.0" layoutY="762.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/newsicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle fx:id="watchlistHighlight" fill="WHITE" layoutX="54.0" layoutY="800.0" radius="3.0" stroke="#615858" strokeType="INSIDE" />
+      <Circle fx:id="searchHighlight" fill="WHITE" layoutX="140.0" layoutY="800.0" radius="3.0" stroke="#615858" strokeType="INSIDE" />
+      <Circle fx:id="homeHighlight" fill="#ffffff00" layoutX="232.0" layoutY="800.0" radius="3.0" stroke="#615858" strokeType="INSIDE" />
+      <Circle fx:id="newsHighlight" layoutX="313.0" layoutY="800.0" radius="3.0" stroke="#615858" strokeType="INSIDE" />
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutY="70.0" prefHeight="689.0" prefWidth="375.0" style="-fx-background-color: white;" stylesheets="@style.css" vbarPolicy="ALWAYS">
+         <content>
+            <VBox fx:id="vBox" prefHeight="688.0" prefWidth="358.0" spacing="5.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding></VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

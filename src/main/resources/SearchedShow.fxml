@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#expandDetails" prefHeight="80.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ispw.graphic_controller.GUIManageSearchResultsController">
+   <children>
+      <Pane layoutX="9.0" layoutY="7.0">
+         <children>
+            <ImageView fx:id="seriesImg" fitHeight="66.0" fitWidth="51.0" pickOnBounds="true" />
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.42065009474754333" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Label fx:id="title" layoutX="66.0" layoutY="11.0" text="A beautiful life">
+         <font>
+            <Font name="SF Pro Display Medium" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="rating" layoutX="66.0" layoutY="33.0" text="7.5" textFill="#545252">
+         <font>
+            <Font name="SF Pro Display Regular" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="genre" layoutX="66.0" layoutY="52.0" text="Drama" textFill="#9e9c9c">
+         <font>
+            <Font name="SF Pro Display Bold Italic" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

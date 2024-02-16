@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="270.0" style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ispw.graphic_controller.GUITimeslotController">
+   <children>
+      <Button fx:id="close" layoutX="240.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/remove-circle-icon-2048x2046-cye5qqsc.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="89.0" layoutY="35.0" text="Select a timeslot">
+         <font>
+            <Font name="SF Pro Text Semibold" size="11.0" />
+         </font>
+      </Label>
+      <Button fx:id="submit" layoutX="200.0" layoutY="115.0" mnemonicParsing="false" onAction="#submitTimeslot" prefHeight="21.0" prefWidth="53.0" style="-fx-background-color: FFD60F; -fx-background-radius: 8;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="SF Mono Bold" size="10.0" />
+         </font>
+      </Button>
+      <TextField fx:id="text" alignment="CENTER" layoutX="66.0" layoutY="55.0" prefWidth="134.0" promptText="hh/mm/ss" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow height="6.26" offsetY="0.75" radius="5.577500000000001" spread="0.03" width="18.05">
+               <color>
+                  <Color red="0.28947368264198303" green="0.2720516622066498" blue="0.2720516622066498" opacity="0.6299999952316284" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="SF Pro Display Regular" size="11.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errorLbl" layoutX="66.0" layoutY="80.0" text="Format error" textFill="#d00f0f" visible="false">
+         <font>
+            <Font name="SF Pro Text Semibold" size="8.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
