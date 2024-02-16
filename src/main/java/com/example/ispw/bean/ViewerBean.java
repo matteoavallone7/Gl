@@ -1,7 +1,6 @@
 package com.example.ispw.bean;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class ViewerBean {
 
