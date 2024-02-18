@@ -52,10 +52,9 @@ public class EpisodeBean {
         private String runningTime;
         private LocalDate airingDate;
 
-        public Builder(int id, String tvSeries, int season) {
+        public Builder id(int id) {
             this.id = id;
-            this.tvSeries = tvSeries;
-            this.season = season;
+            return this;
         }
 
         public Builder overview(String overview) {
@@ -70,6 +69,16 @@ public class EpisodeBean {
 
         public Builder imgSrc(String imgSrc) {
             this.imgSrc = imgSrc;
+            return this;
+        }
+
+        public Builder tvSeries(String tvSeries) {
+            this.tvSeries = tvSeries;
+            return this;
+        }
+
+        public Builder season(int season) {
+            this.season = season;
             return this;
         }
 

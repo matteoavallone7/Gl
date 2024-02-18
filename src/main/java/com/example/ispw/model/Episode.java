@@ -41,20 +41,6 @@ public class Episode {
         private String runningTime;
         private LocalDate airingDate;
 
-        public Builder(int id, String description, String title, String imgSource, int season, String tvSeries, double rating) {
-            this.id = id;
-            this.description = description;
-            this.title = title;
-            this.imgSource = imgSource;
-            this.season = season;
-            this.tvSeries = tvSeries;
-            this.rating = rating;
-        }
-
-        public Episode build() {
-            return new Episode(this);
-        }
-
         public Builder id(int id) {
             this.id = id;
             return this;
@@ -98,6 +84,10 @@ public class Episode {
         public Builder airingDate(LocalDate airingDate) {
             this.airingDate = airingDate;
             return this;
+        }
+
+        public Episode build() {
+            return new Episode(this);
         }
     }
 
