@@ -60,10 +60,12 @@ public class GUIViewerNewsController {
     public void showWatchlist() throws IOException {
         Stage stage = Main.getStage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Watchlist.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
+        AnchorPane screen = fxmlLoader.load();
+        Scene scene = new Scene(screen);
         GUIWatchlistController guiWatchlistController = fxmlLoader.getController();
+        guiWatchlistController.setCurrentPage(screen);
         guiWatchlistController.displayWatchlist();
+        stage.setScene(scene);
         stage.show();
     }
 

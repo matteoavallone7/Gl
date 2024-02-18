@@ -24,7 +24,7 @@ public class BrowseSeriesController {
 
         tvSeriesList = SeriesDAO.getSearchResults(searchModel);
         for (TvSeries tvSeries : tvSeriesList) {
-            TvSeriesBean tvSeriesBean = new TvSeriesBean(tvSeries.getName(), tvSeries.getSeasons(), tvSeries.getImgSource(), tvSeries.getPlot(), tvSeries.getEpisodes(), tvSeries.getGenre(), tvSeries.getCountryOfOrigin(), tvSeries.getRating());
+            TvSeriesBean tvSeriesBean = new TvSeriesBean.Builder(tvSeries.getName(), tvSeries.getSeasons(), tvSeries.getImgSource(), tvSeries.getPlot(), tvSeries.getEpisodes(), tvSeries.getGenre(), tvSeries.getCountryOfOrigin(), tvSeries.getRating()).build();
             tvSeriesBeanList.add(tvSeriesBean);
         }
 
@@ -35,7 +35,7 @@ public class BrowseSeriesController {
     public TvSeriesBean expandedDetails(String showName) {
 
         TvSeries tvSeries = SeriesDAO.getTvSeriesDetails(showName);
-        TvSeriesBean tvSeriesBean = new TvSeriesBean(tvSeries.getName(), tvSeries.getSeasons(), tvSeries.getImgSource(), tvSeries.getPlot(), tvSeries.getEpisodes(), tvSeries.getGenre(), tvSeries.getCountryOfOrigin(), tvSeries.getRating(), tvSeries.getAiringDate(), tvSeries.getAiringStatus());
+        TvSeriesBean tvSeriesBean = new TvSeriesBean.Builder(tvSeries.getName(), tvSeries.getSeasons(), tvSeries.getImgSource(), tvSeries.getPlot(), tvSeries.getEpisodes(), tvSeries.getGenre(), tvSeries.getCountryOfOrigin(), tvSeries.getRating()).airingDate(tvSeries.getAiringDate()).watchlistStatus(tvSeries.getAiringStatus()).build();
         return tvSeriesBean;
     }
 }

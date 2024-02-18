@@ -25,22 +25,57 @@ public class TvSeriesBean extends Subject {
         this.name = name;
     }
 
-    public TvSeriesBean(String name, int seasons, String image, String plot, int episodes, String genre, String countryOfOrigin, float rating) {
-        this.name = name;
-        this.seasons = seasons;
-        this.image = image;
-        this.plot = plot;
-        this.episodes = episodes;
-        this.genre = genre;
-        this.countryOfOrigin = countryOfOrigin;
-        this.rating = rating;
+    private TvSeriesBean(Builder builder) {
+        this.name = builder.name;
+        this.seasons = builder.seasons;
+        this.image = builder.image;
+        this.plot = builder.plot;
+        this.episodes = builder.episodes;
+        this.genre = builder.genre;
+        this.countryOfOrigin = builder.countryOfOrigin;
+        this.rating = builder.rating;
+        this.airingDate = builder.airingDate;
+        if (builder.watchlistStatus != null) {
+            this.watchlistStatus = builder.watchlistStatus.getId();
+        }
     }
 
+    public static class Builder {
+        private String name;
+        private int seasons;
+        private String image;
+        private String plot;
+        private int episodes;
+        private String genre;
+        private String countryOfOrigin;
+        private float rating;
+        private LocalDate airingDate;
+        private SeriesAiringStatus watchlistStatus;
 
-    public TvSeriesBean(String name, int seasons, String image, String plot, int episodes, String genre, String countryOfOrigin, float rating, LocalDate airingDate, SeriesAiringStatus watchlistStatus) {
-        this(name, seasons, image, plot, episodes, genre, countryOfOrigin, rating);
-        this.airingDate = airingDate;
-        this.watchlistStatus = watchlistStatus.getId();
+        public Builder(String name, int seasons, String image, String plot, int episodes, String genre, String countryOfOrigin, float rating) {
+            this.name = name;
+            this.seasons = seasons;
+            this.image = image;
+            this.plot = plot;
+            this.episodes = episodes;
+            this.genre = genre;
+            this.countryOfOrigin = countryOfOrigin;
+            this.rating = rating;
+        }
+
+        public Builder airingDate(LocalDate airingDate) {
+            this.airingDate = airingDate;
+            return this;
+        }
+
+        public Builder watchlistStatus(SeriesAiringStatus watchlistStatus) {
+            this.watchlistStatus = watchlistStatus;
+            return this;
+        }
+
+        public TvSeriesBean build() {
+            return new TvSeriesBean(this);
+        }
     }
 
     public TvSeriesBean(String name, String image, SeriesStatus watchlistStatus, LocalDate airingDate) {
