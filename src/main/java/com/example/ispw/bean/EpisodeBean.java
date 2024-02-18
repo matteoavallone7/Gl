@@ -29,77 +29,14 @@ public class EpisodeBean {
         this.tvSeries = tvSeries;
     }
 
-    private EpisodeBean(Builder builder) {
-        this.id = builder.id;
-        this.overview = builder.overview;
-        this.title = builder.title;
-        this.imgSrc = builder.imgSrc;
-        this.tvSeries = builder.tvSeries;
-        this.season = builder.season;
-        this.rating = builder.rating;
-        this.runningTime = builder.runningTime;
-        this.airingDate = builder.airingDate;
-    }
-
-    public static class Builder {
-        private int id;
-        private String overview;
-        private String title;
-        private String imgSrc;
-        private String tvSeries;
-        private int season;
-        private double rating;
-        private String runningTime;
-        private LocalDate airingDate;
-
-        public Builder id(int id) {
-            this.id = id;
-            return this;
-        }
-
-        public Builder overview(String overview) {
-            this.overview = overview;
-            return this;
-        }
-
-        public Builder title(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public Builder imgSrc(String imgSrc) {
-            this.imgSrc = imgSrc;
-            return this;
-        }
-
-        public Builder tvSeries(String tvSeries) {
-            this.tvSeries = tvSeries;
-            return this;
-        }
-
-        public Builder season(int season) {
-            this.season = season;
-            return this;
-        }
-
-        public Builder rating(double rating) {
-            this.rating = rating;
-            return this;
-        }
-
-        public Builder runningTime(String runningTime) {
-            this.runningTime = runningTime;
-            return this;
-        }
-
-        public Builder airingDate(LocalDate airingDate) {
-            this.airingDate = airingDate;
-            return this;
-        }
-
-        public EpisodeBean build() {
-            return new EpisodeBean(this);
-        }
+    public EpisodeBean(int id, String overview, String title, String imgSrc, int season, double rating, LocalDate airingDate) {
+        this.id = id;
+        this.season = season;
+        this.airingDate = airingDate;
+        this.overview = overview;
+        this.title = title;
+        this.imgSrc = imgSrc;
+        this.rating = rating;
     }
 
     public int getId() {

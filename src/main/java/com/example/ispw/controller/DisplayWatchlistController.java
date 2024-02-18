@@ -68,7 +68,7 @@ public class DisplayWatchlistController {
     public EpisodeBean getEpisodeDetails(EpisodeBean episodeBean) {
 
         Episode episode = EpisodeDAO.getEpDetails(episodeBean.getId(), episodeBean.getSeason(), episodeBean.getTvSeries());
-        return new EpisodeBean.Builder().id(episodeBean.getId()).tvSeries(episodeBean.getTvSeries()).season(episodeBean.getSeason()).overview(episode.getDescription()).title(episode.getTitle()).imgSrc(episode.getImgSource()).rating(episode.getRating()).runningTime(episode.getRunningTime()).airingDate(episode.getAiringDate()).build();
+        return new EpisodeBean(episode.getId(), episode.getDescription(), episode.getTitle(), episode.getImgSource(), episode.getSeason(), episode.getRating(), episode.getAiringDate());
     }
 
     public List<TrackBean> getEpisodeMusicInfo(EpisodeBean episodeBean) {

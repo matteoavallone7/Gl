@@ -133,16 +133,6 @@
             <Font name="SF Pro Display Regular" size="12.0" />
          </font>
       </Label>
-      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="38.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/tick.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="runningTime" layoutX="62.0" layoutY="403.0" text="Running time">
-         <font>
-            <Font name="SF Pro Display Regular" size="12.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="30.0" fitWidth="18.0" layoutX="267.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/star.png" />

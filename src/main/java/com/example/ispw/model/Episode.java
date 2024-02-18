@@ -1,8 +1,7 @@
 package com.example.ispw.model;
 
+
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Locale;
 
 public class Episode {
 
@@ -18,78 +17,15 @@ public class Episode {
     private String timeslot;
 
 
-    private Episode(Builder builder) {
-        this.id = builder.id;
-        this.description = builder.description;
-        this.title = builder.title;
-        this.imgSource = builder.imgSource;
-        this.season = builder.season;
-        this.tvSeries = builder.tvSeries;
-        this.rating = builder.rating;
-        this.runningTime = builder.runningTime;
-        this.airingDate = builder.airingDate;
-    }
-
-    public static class Builder {
-        private int id;
-        private String description;
-        private String title;
-        private String imgSource;
-        private int season;
-        private String tvSeries;
-        private double rating;
-        private String runningTime;
-        private LocalDate airingDate;
-
-        public Builder id(int id) {
-            this.id = id;
-            return this;
-        }
-
-        public Builder description(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public Builder title(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public Builder imgSource(String imgSource) {
-            this.imgSource = imgSource;
-            return this;
-        }
-
-        public Builder season(int season) {
-            this.season = season;
-            return this;
-        }
-
-        public Builder tvSeries(String tvSeries) {
-            this.tvSeries = tvSeries;
-            return this;
-        }
-
-        public Builder rating(double rating) {
-            this.rating = rating;
-            return this;
-        }
-
-        public Builder runningTime(String runningTime) {
-            this.runningTime = runningTime;
-            return this;
-        }
-
-        public Builder airingDate(LocalDate airingDate) {
-            this.airingDate = airingDate;
-            return this;
-        }
-
-        public Episode build() {
-            return new Episode(this);
-        }
-    }
+   public Episode(int id, String description, String title, String imgSource, int season, double rating, LocalDate airingDate) {
+       this.id = id;
+       this.description = description;
+       this.title = title;
+       this.imgSource = imgSource;
+       this.season = season;
+       this.rating = rating;
+       this.airingDate = airingDate;
+   }
 
     public Episode(int id, int season, LocalDate airingDate, String timeslot) {
         this.id = id;

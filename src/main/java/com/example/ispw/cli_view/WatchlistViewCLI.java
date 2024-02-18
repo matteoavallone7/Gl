@@ -107,7 +107,7 @@ public class WatchlistViewCLI {
         Printer.print("S" + episodeBean.getSeason() + "E" + episodeBean.getId());
         Printer.print("\nTitle: " + episodeBean.getTitle());
         Printer.print("\nOverview:\n" + episodeBean.getOverview());
-        Printer.print("Rating: " + episodeBean.getRating() + ", Running Time: " + episodeBean.getRunningTime() + ", Airing Date: " + episodeBean.getAiringDate());
+        Printer.print("Rating: " + episodeBean.getRating() + ", Airing Date: " + episodeBean.getAiringDate());
         if (episodeBean.getTimeslot() != null) {
             Printer.print("\nTimeslot: " + episodeBean.getTimeslot());
         }

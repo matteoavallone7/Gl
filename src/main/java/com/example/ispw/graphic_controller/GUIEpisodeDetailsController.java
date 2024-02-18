@@ -41,8 +41,6 @@ public class GUIEpisodeDetailsController {
     @FXML
     private Label rating;
 
-    @FXML
-    private Label runningTime;
 
     @FXML
     private TextArea textArea;
@@ -90,7 +88,6 @@ public class GUIEpisodeDetailsController {
         EpisodeBean episode = displayWatchlistController.getEpisodeDetails(currentEpisode);
         airingDate.setText(DateSupport.fromLocalDateToString(episode.getAiringDate()));
         rating.setText(String.valueOf(episode.getRating()));
-        runningTime.setText(episode.getRunningTime());
         textArea.setText(episode.getOverview());
         titleLbl.setText(episode.getTitle());
         String id = "S" + episode.getSeason() + "E" + episode.getId();
