@@ -44,7 +44,6 @@ public class GUILoginController {
         stage.setScene(scene);
         GUIViewerHomepage guiViewerHomepage = fxmlLoader.getController();
         guiViewerHomepage.initialize();
-        System.out.println("initializing...");
         stage.show();
     }
 

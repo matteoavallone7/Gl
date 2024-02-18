@@ -10,7 +10,7 @@ public class Review {
     private String tvSeries;
     private String reviewText;
     private float rating;
-    public String username;
+    private String username;
     private LocalDate pubDate;
 
     public int getEpisodeId() {

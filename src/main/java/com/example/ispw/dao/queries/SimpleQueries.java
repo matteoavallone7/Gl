@@ -18,7 +18,6 @@ public class SimpleQueries {
         preparedStatement = connection.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         preparedStatement.setString(1, username);
         preparedStatement.setString(2, password);
-        System.out.println("Executing SQL query...");
         return preparedStatement.executeQuery();
     }
 

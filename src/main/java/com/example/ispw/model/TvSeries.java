@@ -22,15 +22,71 @@ public class TvSeries {
     private SeriesAiringStatus airingStatus;
     private float rating;
 
-    public TvSeries(String name, int seasons, String plot, int episodes, String genre, String imgSource, String countryOfOrigin, LocalDate airingDate, SeriesAiringStatus
-                    airingStatus, float rating){
-        this(name, imgSource, genre, rating);
-        this.seasons = seasons;
-        this.plot = plot;
-        this.episodes = episodes;
-        this.countryOfOrigin = countryOfOrigin;
-        this.airingDate = airingDate;
-        this.airingStatus = airingStatus;
+    private TvSeries(Builder builder) {
+        this.name = builder.name;
+        this.seasons = builder.seasons;
+        this.plot = builder.plot;
+        this.episodes = builder.episodes;
+        this.genre = builder.genre;
+        this.imgSource = builder.imgSource;
+        this.countryOfOrigin = builder.countryOfOrigin;
+        this.airingDate = builder.airingDate;
+        this.airingStatus = builder.airingStatus;
+        this.rating = builder.rating;
+    }
+
+    public static class Builder {
+        private String name;
+        private int seasons;
+        private String plot;
+        private int episodes;
+        private String genre;
+        private String imgSource;
+        private String countryOfOrigin;
+        private LocalDate airingDate;
+        private SeriesAiringStatus airingStatus;
+        private float rating;
+
+        public Builder(String name, String imgSource, String genre, float rating) {
+            this.name = name;
+            this.imgSource = imgSource;
+            this.genre = genre;
+            this.rating = rating;
+        }
+
+        public Builder seasons(int seasons) {
+            this.seasons = seasons;
+            return this;
+        }
+
+        public Builder plot(String plot) {
+            this.plot = plot;
+            return this;
+        }
+
+        public Builder episodes(int episodes) {
+            this.episodes = episodes;
+            return this;
+        }
+
+        public Builder countryOfOrigin(String countryOfOrigin) {
+            this.countryOfOrigin = countryOfOrigin;
+            return this;
+        }
+
+        public Builder airingDate(LocalDate airingDate) {
+            this.airingDate = airingDate;
+            return this;
+        }
+
+        public Builder airingStatus(SeriesAiringStatus airingStatus) {
+            this.airingStatus = airingStatus;
+            return this;
+        }
+
+        public TvSeries build() {
+            return new TvSeries(this);
+        }
     }
 
     public TvSeries(String name, String imgSource, String genre, float rating) {

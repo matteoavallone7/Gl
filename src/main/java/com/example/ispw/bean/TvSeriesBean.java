@@ -52,7 +52,7 @@ public class TvSeriesBean extends Subject {
         private LocalDate airingDate;
         private SeriesAiringStatus watchlistStatus;
 
-        public Builder(String name, int seasons, String image, String plot, int episodes, String genre, String countryOfOrigin, float rating) {
+        public Builder(String name, int seasons, String image, String plot, int episodes, String genre, String countryOfOrigin) {
             this.name = name;
             this.seasons = seasons;
             this.image = image;
@@ -60,7 +60,11 @@ public class TvSeriesBean extends Subject {
             this.episodes = episodes;
             this.genre = genre;
             this.countryOfOrigin = countryOfOrigin;
+        }
+
+        public Builder rating(float rating) {
             this.rating = rating;
+            return this;
         }
 
         public Builder airingDate(LocalDate airingDate) {

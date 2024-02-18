@@ -74,7 +74,6 @@ public class SeriesDAO {
         try {
             connection = DBConnection.getConnection();
             seriesId = getSeriesId(tvSeries.getName());
-            System.out.println(seriesId);
             watchlist = WatchlistDAO.getWatchlistIdFromUser();
             CRUDQueries.deleteSeries(connection, seriesId, watchlist);
 
@@ -139,7 +138,7 @@ public class SeriesDAO {
                 SeriesAiringStatus airingStatus = SeriesAiringStatus.fromString(rs.getString(8));
                 int numEpisodes = rs.getInt(9);
                 float rating = getSeriesRating(seriesId);
-                tvSeries = new TvSeries(name, numSeasons, plot, numEpisodes, genre, image, country, airingDate, airingStatus, rating);
+                tvSeries = new TvSeries.Builder(name, image, genre, rating).seasons(numSeasons).plot(plot).episodes(numEpisodes).countryOfOrigin(country).airingDate(airingDate).airingStatus(airingStatus).build();
             } while (rs.next());
 
             rs.close();
