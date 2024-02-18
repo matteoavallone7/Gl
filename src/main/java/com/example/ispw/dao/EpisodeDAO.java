@@ -104,7 +104,7 @@ public class EpisodeDAO {
                 int seasonId = resultSet.getInt(4);
                 String runningTime = resultSet.getString(5);
                 LocalDate airingDate = resultSet.getDate(6).toLocalDate();
-                episode = new Episode(id, overview, title, image, seasonId, seriesName, averageRating, runningTime, airingDate);
+                episode = new Episode.Builder(id, overview, title, image, seasonId, seriesName, averageRating).runningTime(runningTime).airingDate(airingDate).build();
             } while (resultSet.next());
 
             resultSet.close();
