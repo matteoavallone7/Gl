@@ -9,10 +9,10 @@ import com.example.ispw.utilities.Printer;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Objects;
-import java.util.logging.SimpleFormatter;
 
 public class ViewerDAO {
+
+    private ViewerDAO() {}
 
     public static Viewer fetchViewerByUsername(String username) throws InvalidUserCredentialsException {
         Connection connection;

@@ -37,7 +37,6 @@ public class LoginDAOJDBC implements LoginDAO {
 
         } catch (SQLException | InvalidUserCredentialsException e) {
             Printer.printError(e.getMessage());
-            e.printStackTrace();
         }
 
         return userProfile;

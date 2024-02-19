@@ -1,18 +1,13 @@
 package com.example.ispw.dao;
 
-import com.example.ispw.bean.TvSeriesBean;
 import com.example.ispw.connection.DBConnection;
 import com.example.ispw.dao.queries.CRUDQueries;
 import com.example.ispw.dao.queries.SimpleQueries;
 import com.example.ispw.enums.SeriesAiringStatus;
-import com.example.ispw.enums.SeriesStatus;
 import com.example.ispw.exceptions.DAOException;
-import com.example.ispw.exceptions.DatabaseException;
 import com.example.ispw.exceptions.SeriesNotFoundException;
-import com.example.ispw.model.Review;
 import com.example.ispw.model.SearchModel;
 import com.example.ispw.model.TvSeries;
-import com.example.ispw.session.Session;
 import com.example.ispw.utilities.Printer;
 
 import java.sql.Connection;

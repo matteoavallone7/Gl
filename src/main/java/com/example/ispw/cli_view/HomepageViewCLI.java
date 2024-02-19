@@ -2,9 +2,7 @@ package com.example.ispw.cli_view;
 
 import com.example.ispw.cli_graphic_controller.HomepageCLIController;
 import com.example.ispw.exceptions.InvalidFormatException;
-import com.example.ispw.exceptions.NotYetImplementedException;
 import com.example.ispw.exceptions.SessionUserException;
-import com.example.ispw.session.Session;
 import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;
 

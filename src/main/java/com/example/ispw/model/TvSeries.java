@@ -3,9 +3,7 @@ package com.example.ispw.model;
 import com.example.ispw.enums.SeriesAiringStatus;
 import com.example.ispw.enums.SeriesStatus;
 
-import java.io.File;
 import java.time.LocalDate;
-import java.util.List;
 
 public class TvSeries {
 

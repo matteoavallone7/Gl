@@ -1,6 +1,5 @@
 package com.example.ispw.cli_view;
 
-import com.example.ispw.bean.PostBean;
 import com.example.ispw.cli_graphic_controller.NewsSectionCLIController;
 import com.example.ispw.exceptions.DatabaseException;
 import com.example.ispw.exceptions.InvalidFormatException;
@@ -11,8 +10,6 @@ import com.example.ispw.utilities.Printer;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class NewsSectionViewCLI {

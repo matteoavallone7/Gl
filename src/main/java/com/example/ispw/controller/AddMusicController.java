@@ -16,11 +16,7 @@ public class AddMusicController {
     public boolean verifyEpisode(int episode, int season) {
         String series = Session.getCurrentSession().getSeriesOffAccountBean().getSeriesName();
         int verify = EpisodeDAO.verifyEpisode(episode, season, series);
-        if (verify == 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return verify != 0;
     }
 
     public void addMusicToEpisode(int episode, int season, TrackBean trackBean) {

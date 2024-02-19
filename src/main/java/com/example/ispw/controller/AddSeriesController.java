@@ -6,7 +6,6 @@ import com.example.ispw.enums.SeriesStatus;
 import com.example.ispw.model.TvSeries;
 import com.example.ispw.patterns.Observer;
 
-import java.time.LocalDate;
 
 public class AddSeriesController {
 

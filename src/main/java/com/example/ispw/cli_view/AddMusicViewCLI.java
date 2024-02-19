@@ -4,7 +4,6 @@ import com.example.ispw.bean.RequestBean;
 import com.example.ispw.cli_graphic_controller.AddMusicCLIController;
 import com.example.ispw.exceptions.EpisodeException;
 import com.example.ispw.exceptions.InvalidFormatException;
-import com.example.ispw.exceptions.InvalidUserCredentialsException;
 import com.example.ispw.exceptions.SessionUserException;
 import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;

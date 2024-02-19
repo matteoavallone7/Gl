@@ -8,15 +8,12 @@ import com.example.ispw.exceptions.InvalidFormatException;
 import com.example.ispw.exceptions.RatingFormatException;
 import com.example.ispw.exceptions.SeriesNotFoundException;
 import com.example.ispw.exceptions.SessionUserException;
-import com.example.ispw.model.Episode;
 import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;
 import com.example.ispw.utilities.ValidateTimeslot;
 
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 

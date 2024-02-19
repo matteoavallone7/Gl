@@ -16,8 +16,7 @@ public class Printer {
 
     public static String getChoice() {
         Scanner scanner = new Scanner(System.in);
-        String inputLine = scanner.nextLine().trim();
-        return inputLine;
+        return scanner.nextLine().trim();
     }
 
 }

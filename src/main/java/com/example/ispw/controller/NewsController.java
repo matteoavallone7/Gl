@@ -2,11 +2,9 @@ package com.example.ispw.controller;
 
 import com.example.ispw.bean.PostBean;
 import com.example.ispw.dao.NewsDAO;
-import com.example.ispw.exceptions.DatabaseException;
 import com.example.ispw.exceptions.NoNewsException;
 import com.example.ispw.model.Post;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 

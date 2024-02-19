@@ -69,7 +69,7 @@ public class GUIViewerNewsController {
         stage.show();
     }
 
-    public void toHomepage(ActionEvent event) throws IOException {
+    public void toHomepage() throws IOException {
         Stage stage = Main.getStage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ViewerHomepage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

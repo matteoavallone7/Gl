@@ -47,7 +47,7 @@ public class GUISearchSeriesController {
         stage.show();
     }
 
-    public void showWatchlist(ActionEvent event) throws IOException {
+    public void showWatchlist() throws IOException {
         Stage stage = Main.getStage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Watchlist.fxml"));
         AnchorPane screen = fxmlLoader.load();
@@ -59,7 +59,7 @@ public class GUISearchSeriesController {
         stage.show();
     }
 
-    public void showHomepage(ActionEvent event) throws IOException {
+    public void showHomepage() throws IOException {
         Stage stage = Main.getStage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ViewerHomepage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

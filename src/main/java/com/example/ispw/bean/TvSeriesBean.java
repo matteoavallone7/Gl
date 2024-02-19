@@ -5,7 +5,6 @@ import com.example.ispw.enums.SeriesAiringStatus;
 import com.example.ispw.enums.SeriesStatus;
 import com.example.ispw.patterns.Subject;
 
-import java.io.File;
 import java.time.LocalDate;
 
 public class TvSeriesBean extends Subject {

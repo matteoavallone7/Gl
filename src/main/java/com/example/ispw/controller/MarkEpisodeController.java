@@ -7,7 +7,6 @@ import com.example.ispw.dao.EpisodeDAO;
 import com.example.ispw.dao.WatchlistDAO;
 import com.example.ispw.enums.SeriesStatus;
 import com.example.ispw.exceptions.InvalidFormatException;
-import com.example.ispw.model.Episode;
 import com.example.ispw.model.PartiallyWatchedEp;
 import com.example.ispw.patterns.Observer;
 import com.example.ispw.utilities.ValidateTimeslot;
@@ -17,10 +16,10 @@ import java.util.Objects;
 
 public class MarkEpisodeController {
 
-    private final static int CHANGE_TO_CURRENTLY_WATCHING = 1;
-    private final static int CHANGE_TO_NOT_YET_STARTED = 2;
-    private final static int CHANGE_TO_COMING_SOON = 3;
-    private final static int CHANGE_TO_FINISHED_WATCHING = 4;
+    private static final int CHANGE_TO_CURRENTLY_WATCHING = 1;
+    private static final int CHANGE_TO_NOT_YET_STARTED = 2;
+    private static final int CHANGE_TO_COMING_SOON = 3;
+    private static final int CHANGE_TO_FINISHED_WATCHING = 4;
 
 
     public void markEpAsFullyWatched(EpisodeBean episodeBean, Object object, Observer observer) {

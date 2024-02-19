@@ -2,7 +2,6 @@ package com.example.ispw.cli_graphic_controller;
 
 
 import com.example.ispw.bean.RequestBean;
-import com.example.ispw.bean.SearchBean;
 import com.example.ispw.bean.TrackBean;
 import com.example.ispw.cli_view.AddMusicViewCLI;
 import com.example.ispw.controller.AddMusicController;
@@ -11,7 +10,6 @@ import com.example.ispw.exceptions.EpisodeException;
 import com.example.ispw.exceptions.InvalidFormatException;
 import com.example.ispw.exceptions.SessionUserException;
 import com.example.ispw.session.Session;
-import com.example.ispw.utilities.Printer;
 
 import java.util.List;
 

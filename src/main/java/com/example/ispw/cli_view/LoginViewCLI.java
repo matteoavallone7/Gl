@@ -2,14 +2,10 @@ package com.example.ispw.cli_view;
 
 import com.example.ispw.cli_graphic_controller.LoginCLIController;
 import com.example.ispw.exceptions.InvalidFormatException;
-import com.example.ispw.exceptions.InvalidUserCredentialsException;
 import com.example.ispw.exceptions.NotYetImplementedException;
 import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class LoginViewCLI {

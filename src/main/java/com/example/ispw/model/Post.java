@@ -1,9 +1,7 @@
 package com.example.ispw.model;
 
-import java.io.File;
-import java.lang.reflect.Field;
+
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Post {
 

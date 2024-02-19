@@ -72,8 +72,8 @@ public class GUIFirstTypeBannerController {
 
     public void delete(ActionEvent event) {
         DeleteSeriesController deleteSeriesController = new DeleteSeriesController();
-        AnchorPane banner = (AnchorPane) ((Button) event.getSource()).getParent();
-        deleteSeriesController.deleteSeries(tvSeriesBean, banner, previousPage);
+        AnchorPane anchorPane = (AnchorPane) ((Button) event.getSource()).getParent();
+        deleteSeriesController.deleteSeries(tvSeriesBean, anchorPane, previousPage);
     }
 
     public void expandEpDetails() throws IOException {

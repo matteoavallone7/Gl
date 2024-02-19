@@ -1,13 +1,9 @@
 package com.example.ispw.dao;
 
-import com.example.ispw.bean.ReviewBean;
 import com.example.ispw.connection.DBConnection;
 import com.example.ispw.dao.queries.CRUDQueries;
 import com.example.ispw.dao.queries.SimpleQueries;
 import com.example.ispw.exceptions.DAOException;
-import com.example.ispw.exceptions.RatingErrorException;
-import com.example.ispw.exceptions.SeriesNotFoundException;
-import com.example.ispw.exceptions.SessionUserException;
 import com.example.ispw.model.Review;
 import com.example.ispw.utilities.Printer;
 

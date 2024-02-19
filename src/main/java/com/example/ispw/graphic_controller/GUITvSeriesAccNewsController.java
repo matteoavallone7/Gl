@@ -66,7 +66,7 @@ public class GUITvSeriesAccNewsController {
         return imagePostBean;
     }
 
-    public void createDefaultPost() throws IOException {
+    public void createDefaultPost() {
         NewsController newsController = new NewsController();
         PostBean postBean = getDefaultPostInfo();
         try {
@@ -79,7 +79,7 @@ public class GUITvSeriesAccNewsController {
         newsController.postUpdate(postBean);
     }
 
-    public void createImagePost() throws IOException {
+    public void createImagePost() {
         NewsController newsController = new NewsController();
         PostBean imagePostBean = getImagePostInfo();
         try {
@@ -92,7 +92,7 @@ public class GUITvSeriesAccNewsController {
         newsController.postUpdate(imagePostBean);
     }
 
-    public void loadImage(ActionEvent event) throws IOException {
+    public void loadImage(ActionEvent event) {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image files", "*.png", "*.jpg"));
@@ -102,7 +102,7 @@ public class GUITvSeriesAccNewsController {
         fileLbl.setText(file.getName());
     }
 
-    public void goBack(ActionEvent event) throws IOException {
+    public void goBack() throws IOException {
         Stage stage = Main.getStage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/TvSeriesAccHomepage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

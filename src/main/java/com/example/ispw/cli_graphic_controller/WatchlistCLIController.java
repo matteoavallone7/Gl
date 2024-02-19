@@ -19,21 +19,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class WatchlistCLIController implements GraphicCLIController, Observer {
 
     private WatchlistViewCLI watchlistViewCLI;
-    private final static String MARK_EPISODE_AS_WATCHED = "1";
-    private final static String MARK_EPISODE_AS_PARTIALLY_WATCHED = "2";
-    private final static String EXPAND_EPISODE_DETAILS = "3";
-    private final static String DELETE_SERIES = "4";
-    private final static String RETURN_TO_HOMEPAGE = "5";
-    private final static String CURRENTLY_WATCHING = "CURRENTLY WATCHING";
-    private final static String NOT_YET_STARTED = "NOT YET STARTED";
-    private final static String COMING_SOON = "COMING SOON";
-    private final static String FINISHED_WATCHING = "FINISHED WATCHING";
-    private final static String JUST_DELETED = "DE";
+    private static final  String MARK_EPISODE_AS_WATCHED = "1";
+    private static final String MARK_EPISODE_AS_PARTIALLY_WATCHED = "2";
+    private static final String EXPAND_EPISODE_DETAILS = "3";
+    private static final String DELETE_SERIES = "4";
+    private static final String RETURN_TO_HOMEPAGE = "5";
+    private static final String CURRENTLY_WATCHING = "CURRENTLY WATCHING";
+    private static final String NOT_YET_STARTED = "NOT YET STARTED";
+    private static final String COMING_SOON = "COMING SOON";
+    private static final String FINISHED_WATCHING = "FINISHED WATCHING";
+    private static final String JUST_DELETED = "DE";
     private final List<TvSeriesBean> currentlyWatchingList = new ArrayList<>();
     private final List<TvSeriesBean> notYetStartedList = new ArrayList<>();
     private final List<TvSeriesBean> comingSoonList = new ArrayList<>();

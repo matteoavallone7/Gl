@@ -1,12 +1,10 @@
 package com.example.ispw.dao;
 
-import com.example.ispw.bean.RequestBean;
 import com.example.ispw.connection.DBConnection;
 import com.example.ispw.dao.queries.CRUDQueries;
 import com.example.ispw.dao.queries.SimpleQueries;
 import com.example.ispw.exceptions.DAOException;
 import com.example.ispw.model.Request;
-import com.example.ispw.model.Review;
 import com.example.ispw.utilities.Printer;
 
 import java.sql.Connection;

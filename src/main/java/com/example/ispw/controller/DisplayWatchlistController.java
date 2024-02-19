@@ -9,8 +9,6 @@ import com.example.ispw.dao.WatchlistDAO;
 import com.example.ispw.enums.SeriesStatus;
 import com.example.ispw.exceptions.DAOException;
 import com.example.ispw.exceptions.DatabaseException;
-import com.example.ispw.exceptions.EpisodeException;
-import com.example.ispw.exceptions.RatingErrorException;
 import com.example.ispw.model.Episode;
 import com.example.ispw.model.Track;
 import com.example.ispw.model.TvSeries;
@@ -23,12 +21,12 @@ import java.util.List;
 
 public class DisplayWatchlistController {
 
-    private final static String CURRENTLY_WATCHING = "CURRENTLY WATCHING";
-    private final static String NOT_YET_STARTED = "NOT YET STARTED";
-    private final static String COMING_SOON = "COMING SOON";
-    private final static String FINISHED_WATCHING = "FINISHED WATCHING";
+    private static final String CURRENTLY_WATCHING = "CURRENTLY WATCHING";
+    private static final String NOT_YET_STARTED = "NOT YET STARTED";
+    private static final String COMING_SOON = "COMING SOON";
+    private static final String FINISHED_WATCHING = "FINISHED WATCHING";
 
-    public void getWatchlistLog(Observer observer) throws DatabaseException, SQLException, DAOException {
+    public void getWatchlistLog(Observer observer) throws DatabaseException, DAOException {
 
         List<TvSeries> tvSeriesList = WatchlistDAO.getWatchlistSeries();
 

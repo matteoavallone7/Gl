@@ -1,6 +1,5 @@
 package com.example.ispw.cli_view;
 
-import com.example.ispw.bean.SearchBean;
 import com.example.ispw.cli_graphic_controller.BrowseSeriesCLIController;
 import com.example.ispw.exceptions.DatabaseException;
 import com.example.ispw.exceptions.InvalidFormatException;
@@ -36,7 +35,7 @@ public class BrowseSeriesViewCLI {
         }
     }
 
-    public void getSeriesName() throws SQLException, SeriesNotFoundException, DatabaseException, InvalidFormatException {
+    public void getSeriesName() throws SeriesNotFoundException, InvalidFormatException {
         Printer.print("Tv series name: ");
         Scanner scanner = new Scanner(System.in);
         String inputLine = scanner.nextLine();

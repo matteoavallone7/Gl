@@ -7,11 +7,10 @@ import com.example.ispw.patterns.Observer;
 import com.example.ispw.utilities.Printer;
 
 import java.util.List;
-import java.util.Locale;
 
 public class AddSeriesCLIController implements Observer {
 
-    private final static String NEWLY_ADDED = "NA";
+    private static final String NEWLY_ADDED = "NA";
     public void checkOccurrence(String name, List<TvSeriesBean> tvSeriesBeanList) throws SeriesNotFoundException {
 
             for (TvSeriesBean tvSeriesBean : tvSeriesBeanList) {

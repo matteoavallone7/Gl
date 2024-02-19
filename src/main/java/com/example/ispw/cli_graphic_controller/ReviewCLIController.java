@@ -4,9 +4,7 @@ import com.example.ispw.bean.EpisodeBean;
 import com.example.ispw.bean.ReviewBean;
 import com.example.ispw.cli_view.ReviewViewCLI;
 import com.example.ispw.controller.ReviewController;
-import com.example.ispw.exceptions.InvalidFormatException;
 import com.example.ispw.exceptions.RatingFormatException;
-import com.example.ispw.exceptions.SessionUserException;
 
 import java.io.IOException;
 

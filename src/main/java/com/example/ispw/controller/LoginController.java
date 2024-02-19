@@ -7,18 +7,16 @@ import com.example.ispw.dao.LoginDAO;
 import com.example.ispw.dao.SeriesOffAccountDAO;
 import com.example.ispw.dao.ViewerDAO;
 import com.example.ispw.exceptions.InvalidUserCredentialsException;
-import com.example.ispw.exceptions.SessionUserException;
 import com.example.ispw.model.SeriesOffAccount;
 import com.example.ispw.model.UserProfile;
 import com.example.ispw.model.Viewer;
 import com.example.ispw.patterns.LoginDAOFactory;
 import com.example.ispw.session.Session;
 
-import java.sql.SQLException;
 
 public class LoginController {
 
-    public void checkUser(LoginCredentialsBean loginCredentialsBean) throws SessionUserException {
+    public void checkUser(LoginCredentialsBean loginCredentialsBean) {
 
         LoginDAO loginDAO = LoginDAOFactory.getInstance().createLoginDAO();
 

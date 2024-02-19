@@ -1,10 +1,8 @@
 package com.example.ispw.cli_graphic_controller;
 
-import com.example.ispw.bean.LoginCredentialsBean;
 import com.example.ispw.cli_view.HomepageViewCLI;
 import com.example.ispw.controller.LogoutController;
 import com.example.ispw.exceptions.InvalidFormatException;
-import com.example.ispw.exceptions.NotYetImplementedException;
 import com.example.ispw.exceptions.SessionUserException;
 
 public class HomepageCLIController implements GraphicCLIController {

@@ -12,7 +12,7 @@ public class ValidateTimeslot {
 
     public static boolean isValid(String timeslot) {
 
-        String regex = "^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9](?::[0-5]?[0-9])?$";
+        String regex = "^(?:[01]?\\d|2[0-3]):[0-5]?\\d(?::[0-5]?\\d)?$";
 
         // Compile the ReGex
         Pattern p = Pattern.compile(regex);

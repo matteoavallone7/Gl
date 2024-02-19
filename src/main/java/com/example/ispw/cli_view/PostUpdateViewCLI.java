@@ -1,13 +1,9 @@
 package com.example.ispw.cli_view;
 
 import com.example.ispw.cli_graphic_controller.PostUpdateCLIController;
-import com.example.ispw.exceptions.DatabaseException;
-import com.example.ispw.exceptions.SessionUserException;
 import com.example.ispw.session.Session;
 import com.example.ispw.utilities.Printer;
 
-import java.sql.SQLException;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class PostUpdateViewCLI {

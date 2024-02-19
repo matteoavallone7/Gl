@@ -1,6 +1,5 @@
 package com.example.ispw.dao.queries;
 
-import com.example.ispw.utilities.Printer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

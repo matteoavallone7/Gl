@@ -3,7 +3,6 @@ package com.example.ispw.dao;
 import com.example.ispw.connection.DBConnection;
 import com.example.ispw.dao.queries.CRUDQueries;
 import com.example.ispw.dao.queries.SimpleQueries;
-import com.example.ispw.enums.SeriesAiringStatus;
 import com.example.ispw.enums.SeriesStatus;
 import com.example.ispw.exceptions.DAOException;
 import com.example.ispw.exceptions.DatabaseException;

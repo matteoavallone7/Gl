@@ -1,7 +1,6 @@
 package com.example.ispw.bean;
 
 
-import java.io.File;
 import java.time.LocalDate;
 
 public class PostBean {

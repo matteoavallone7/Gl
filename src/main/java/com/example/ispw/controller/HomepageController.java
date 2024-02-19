@@ -14,8 +14,7 @@ public class HomepageController {
 
     public PostBean getPostOverview() {
         Post post = NewsDAO.getNewsOverview();
-        PostBean postBean = new PostBean(post.getAuthor(), post.getTitle(), post.getDescription(), post.getImageSource(), post.getPubDate());
-        return postBean;
+        return new PostBean(post.getAuthor(), post.getTitle(), post.getDescription(), post.getImageSource(), post.getPubDate());
     }
 
     public List<TvSeriesBean> getRandomSeries() {

@@ -67,11 +67,11 @@ public class GUIWatchlistController implements Observer {
     private int column = 0;
     private int row = 0;
 
-    private final static String CURRENTLY_WATCHING = "CURRENTLY WATCHING";
-    private final static String NOT_YET_STARTED = "NOT YET STARTED";
-    private final static String COMING_SOON = "COMING SOON";
-    private final static String FINISHED_WATCHING = "FINISHED WATCHING";
-    private final static String JUST_DELETED = "DE";
+    private static final String CURRENTLY_WATCHING = "CURRENTLY WATCHING";
+    private static final String NOT_YET_STARTED = "NOT YET STARTED";
+    private static final String COMING_SOON = "COMING SOON";
+    private static final String FINISHED_WATCHING = "FINISHED WATCHING";
+    private static final String JUST_DELETED = "DE";
 
     private Parent pageContainer;
 
@@ -101,7 +101,7 @@ public class GUIWatchlistController implements Observer {
         stage.show();
     }
 
-    public void toHomepage(ActionEvent event) throws IOException {
+    public void toHomepage() throws IOException {
         Stage stage = Main.getStage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Main.class.getResource("/ViewerHomepage.fxml"));
@@ -112,11 +112,11 @@ public class GUIWatchlistController implements Observer {
         stage.show();
     }
 
-    public void displayWatchlist() throws IOException {
+    public void displayWatchlist() {
         DisplayWatchlistController displayWatchlistController = new DisplayWatchlistController();
         try {
             displayWatchlistController.getWatchlistLog(this);
-        } catch (DatabaseException | SQLException e) {
+        } catch (DatabaseException e) {
             ExceptionSupport.showExceptionGUI("Database Error", "Please try again later");
         } catch (DAOException e) {
             ExceptionSupport.showExceptionGUI("", e.getMessage());

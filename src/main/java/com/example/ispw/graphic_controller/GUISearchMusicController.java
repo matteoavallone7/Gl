@@ -46,7 +46,7 @@ public class GUISearchMusicController {
         verify(ep, season);
     }
 
-    public void verify(int ep, int season) throws IOException {
+    public void verify(int ep, int season) {
 
         try {
             if (addMusicController.verifyEpisode(ep, season)) {

@@ -3,9 +3,7 @@ package com.example.ispw.dao;
 import com.example.ispw.connection.DBConnection;
 import com.example.ispw.dao.queries.SimpleQueries;
 import com.example.ispw.exceptions.DAOException;
-import com.example.ispw.exceptions.InvalidFormatException;
 import com.example.ispw.exceptions.InvalidUserCredentialsException;
-import com.example.ispw.model.Request;
 import com.example.ispw.model.SeriesOffAccount;
 import com.example.ispw.utilities.Printer;
 
@@ -14,6 +12,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SeriesOffAccountDAO {
+
+    private SeriesOffAccountDAO() {}
 
     public static SeriesOffAccount fetchSeriesAccountByUsername(String username) {
         Connection connection;

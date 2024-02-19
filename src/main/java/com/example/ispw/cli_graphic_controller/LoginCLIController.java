@@ -5,13 +5,6 @@ import com.example.ispw.cli_view.LoginViewCLI;
 import com.example.ispw.controller.LoginController;
 import com.example.ispw.exceptions.*;
 import com.example.ispw.utilities.ExceptionSupport;
-import com.example.ispw.utilities.Printer;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.sql.SQLException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class LoginCLIController implements GraphicCLIController {
 

@@ -1,13 +1,10 @@
 package com.example.ispw.connection;
 
-import com.example.ispw.exceptions.DatabaseException;
 import com.example.ispw.utilities.Printer;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
-import java.util.Objects;
 import java.util.Properties;
 
 //usato il pattern singleton

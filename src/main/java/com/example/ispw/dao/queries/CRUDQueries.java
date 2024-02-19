@@ -1,7 +1,6 @@
 package com.example.ispw.dao.queries;
 
 import java.sql.*;
-import java.util.Date;
 
 public class CRUDQueries {
 

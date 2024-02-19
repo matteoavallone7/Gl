@@ -2,8 +2,6 @@ package com.example.ispw.controller;
 
 import com.example.ispw.bean.RequestBean;
 import com.example.ispw.dao.RequestDAO;
-import com.example.ispw.dao.ReviewDAO;
-import com.example.ispw.dao.SeriesDAO;
 import com.example.ispw.model.Request;
 import com.example.ispw.session.Session;
 
