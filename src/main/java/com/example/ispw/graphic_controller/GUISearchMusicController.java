@@ -3,9 +3,7 @@ package com.example.ispw.graphic_controller;
 import com.example.ispw.Main;
 import com.example.ispw.bean.SearchBean;
 import com.example.ispw.bean.TrackBean;
-import com.example.ispw.bean.TvSeriesBean;
 import com.example.ispw.controller.AddMusicController;
-import com.example.ispw.controller.AddSeriesController;
 import com.example.ispw.exceptions.DAOException;
 import com.example.ispw.exceptions.EpisodeException;
 import com.example.ispw.utilities.ExceptionSupport;
@@ -40,7 +38,7 @@ public class GUISearchMusicController {
         this.previousPage = previousPage;
     }
 
-    public void initialize(int ep, int season, Parent previousPage) throws IOException {
+    public void initialize(int ep, int season, Parent previousPage) {
         this.addMusicController = new AddMusicController();
         setPreviousPage(previousPage);
         verify(ep, season);

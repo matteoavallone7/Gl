@@ -26,7 +26,7 @@ public class InitializeSupport {
         try {
             anchorPane = fxmlLoader.load();
         } catch (IOException e) {
-            e.printStackTrace();
+            Printer.printError(e.getMessage());
         }
 
         GUIFirstTypeBannerController controller = fxmlLoader.getController();
@@ -46,7 +46,7 @@ public class InitializeSupport {
         try {
             anchorPane = fxmlLoader.load();
         } catch (IOException e) {
-            e.printStackTrace();
+            Printer.printError(e.getMessage());
         }
 
 
@@ -63,7 +63,7 @@ public class InitializeSupport {
         try {
             anchorPane = fxmlLoader.load();
         } catch (IOException e) {
-            e.printStackTrace();
+            Printer.printError(e.getMessage());
         }
 
         GUIThirdTypeBannerController controller = fxmlLoader.getController();

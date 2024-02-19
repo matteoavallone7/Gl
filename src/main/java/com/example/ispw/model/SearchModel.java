@@ -4,7 +4,9 @@ public class SearchModel {
 
     private String name;
 
-    public SearchModel(){} // Costruttore privo di parametri
+    public SearchModel(){
+        // Costruttore privo di parametri
+    }
 
     public String getName() {
         return name;

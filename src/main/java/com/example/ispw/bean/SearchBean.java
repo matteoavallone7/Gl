@@ -4,7 +4,9 @@ public class SearchBean {
 
     private String name;
 
-    public SearchBean() {} // costruttore privo di parametri
+    public SearchBean() {
+        // costruttore privo di parametri
+    }
 
     public String getName() {
         return name;

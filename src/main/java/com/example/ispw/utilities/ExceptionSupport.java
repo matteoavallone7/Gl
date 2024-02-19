@@ -31,7 +31,7 @@ public class ExceptionSupport {
         try {
             root = loader.load();
         } catch (IOException e) {
-            e.printStackTrace();
+            Printer.printError(e.getMessage());
         }
         ScaleTransition st = new ScaleTransition(Duration.millis(50), root);
         st.setInterpolator(Interpolator.EASE_BOTH);

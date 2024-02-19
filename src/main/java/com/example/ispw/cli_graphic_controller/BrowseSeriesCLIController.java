@@ -8,7 +8,6 @@ import com.example.ispw.exceptions.*;
 import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class BrowseSeriesCLIController implements GraphicCLIController {
         this.browseSeriesViewCLI.showMenu();
     }
 
-    public void executeCommand(String inputLine) throws InvalidFormatException, SQLException, SeriesNotFoundException, DatabaseException, SessionUserException {
+    public void executeCommand(String inputLine) throws InvalidFormatException, SeriesNotFoundException, SessionUserException {
         switch (inputLine) {
             case BROWSE, ADD_SERIES -> this.browseSeriesViewCLI.getSeriesName();
             case RETURN_TO_HOMEPAGE -> new HomepageCLIController(1).start();
