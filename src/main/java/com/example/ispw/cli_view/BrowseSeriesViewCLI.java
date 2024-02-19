@@ -1,14 +1,12 @@
 package com.example.ispw.cli_view;
 
 import com.example.ispw.cli_graphic_controller.BrowseSeriesCLIController;
-import com.example.ispw.exceptions.DatabaseException;
 import com.example.ispw.exceptions.InvalidFormatException;
 import com.example.ispw.exceptions.SeriesNotFoundException;
 import com.example.ispw.exceptions.SessionUserException;
 import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;
 
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class BrowseSeriesViewCLI {
@@ -28,7 +26,7 @@ public class BrowseSeriesViewCLI {
         String inputLine = scanner.nextLine();
         try {
             this.browseSeriesCLIController.executeCommand(inputLine);
-        } catch (InvalidFormatException | SQLException | SeriesNotFoundException | DatabaseException |
+        } catch (InvalidFormatException | SeriesNotFoundException |
                  SessionUserException e) {
             ExceptionSupport.showExceptionCLI(e.getMessage());
             showMenu();

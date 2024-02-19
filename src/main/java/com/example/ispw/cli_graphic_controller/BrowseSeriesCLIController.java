@@ -44,8 +44,9 @@ public class BrowseSeriesCLIController implements GraphicCLIController {
             ExceptionSupport.showExceptionCLI(e.getMessage());
         }
         for (TvSeriesBean tvSeriesBean : tvSeriesBeanList) {
+            TvSeriesBean tvSeriesBean1 = browseSeriesController.expandedDetails(tvSeriesBean.getName());
             BrowseSeriesViewCLI browseSeriesViewCLI1 = new BrowseSeriesViewCLI(this);
-            browseSeriesViewCLI1.printResults(tvSeriesBean.getName(), tvSeriesBean.getSeasons(), tvSeriesBean.getPlot(), tvSeriesBean.getEpisodes(), tvSeriesBean.getGenre(), tvSeriesBean.getCountryOfOrigin(), tvSeriesBean.getRating());
+            browseSeriesViewCLI1.printResults(tvSeriesBean1.getName(), tvSeriesBean1.getSeasons(), tvSeriesBean1.getPlot(), tvSeriesBean1.getEpisodes(), tvSeriesBean1.getGenre(), tvSeriesBean1.getCountryOfOrigin(), tvSeriesBean1.getRating());
         }
 
 

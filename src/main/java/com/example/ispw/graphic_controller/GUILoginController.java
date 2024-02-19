@@ -1,18 +1,15 @@
 package com.example.ispw.graphic_controller;
 
-import com.example.ispw.Main;
 import com.example.ispw.bean.LoginCredentialsBean;
 import com.example.ispw.controller.LoginController;
 import com.example.ispw.exceptions.InvalidUserCredentialsException;
 
-import com.example.ispw.exceptions.SessionUserException;
 import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -20,8 +17,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.Objects;
 
 public class GUILoginController {
 
@@ -80,9 +75,7 @@ public class GUILoginController {
                 throw new InvalidUserCredentialsException();
             }
 
-        } catch (SessionUserException e) {
-            message.setText("User does not exist");
-        } catch (IOException e) {
+        }  catch (IOException e) {
             Printer.printError(e.getMessage());
         } catch (InvalidUserCredentialsException e) {
             message.setText("Invalid Credentials");

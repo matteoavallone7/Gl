@@ -15,7 +15,6 @@ import com.example.ispw.utilities.ExceptionSupport;
 import com.example.ispw.utilities.Printer;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -43,7 +42,7 @@ public class WatchlistCLIController implements GraphicCLIController, Observer {
         DisplayWatchlistController displayWatchlistController = new DisplayWatchlistController();
         try {
             displayWatchlistController.getWatchlistLog(this);
-        } catch (DatabaseException | SQLException | DAOException e) {
+        } catch (DatabaseException | DAOException e) {
             ExceptionSupport.showExceptionCLI(e.getMessage());
         }
         this.watchlistViewCLI = new WatchlistViewCLI(this);

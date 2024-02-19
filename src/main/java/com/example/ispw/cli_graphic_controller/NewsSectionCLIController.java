@@ -29,6 +29,7 @@ public class NewsSectionCLIController implements GraphicCLIController {
             case 1 -> {
                 if (Session.getCurrentSession().getViewerBean() != null) {
                     readNews();
+                    this.newsSectionViewCLI.showViewerMenu();
                 } else {
                     PostUpdateCLIController postUpdateCLIController = new PostUpdateCLIController();
                     postUpdateCLIController.start();
