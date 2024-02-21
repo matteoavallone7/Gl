@@ -1,14 +1,17 @@
 package com.example.ispw.utilities;
 
+import com.example.ispw.exceptions.InvalidFormatException;
+
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoField;
+import java.time.format.DateTimeParseException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidateTimeslot {
 
-    private ValidateTimeslot() {}
+    private ValidateTimeslot() {
+    }
 
     public static boolean isValid(String timeslot) {
 
@@ -33,17 +36,22 @@ public class ValidateTimeslot {
         return m.matches();
     }
 
-    public static boolean getMinutes(String timeslot, String epRunningTime) {
-        LocalTime localTime = LocalTime.parse(timeslot, DateTimeFormatter.ofPattern("HH:mm:ss"));
-        LocalTime running = LocalTime.parse(epRunningTime, DateTimeFormatter.ofPattern("HH:mm:ss"));
-        int hour = localTime.get(ChronoField.CLOCK_HOUR_OF_DAY);
-        int minutes = localTime.get(ChronoField.MINUTE_OF_HOUR);
-        int parsedTimeslot = hour*60+minutes;
-        int hourEp = running.get(ChronoField.CLOCK_HOUR_OF_DAY);
-        int minutesEp = running.get(ChronoField.MINUTE_OF_HOUR);
-        int parsedRunning = hourEp*60+minutesEp;
-        return parsedTimeslot < parsedRunning;
+    public static boolean getMinutes(String timeslot, String epRunningTime) throws InvalidFormatException {
+        try {
+            LocalTime localTime = LocalTime.parse(timeslot, DateTimeFormatter.ofPattern("HH:mm:ss"));
+            LocalTime running = LocalTime.parse(epRunningTime, DateTimeFormatter.ofPattern("HH:mm:ss"));
+            int hour = localTime.getHour();
+            int minutes = localTime.getMinute();
+            int parsedTimeslot = hour * 60 + minutes;
+            int hourEp = running.getHour();
+            int minutesEp = running.getMinute();
+            int parsedRunning = hourEp * 60 + minutesEp;
+            return parsedTimeslot < parsedRunning;
+        } catch (DateTimeParseException e) {
+            throw new InvalidFormatException();
+        }
     }
-
 }
+
+
 

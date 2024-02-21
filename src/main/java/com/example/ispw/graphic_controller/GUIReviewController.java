@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import org.controlsfx.control.Rating;
@@ -19,6 +20,8 @@ public class GUIReviewController {
 
     @FXML
     private TextArea reviewText;
+    @FXML
+    private Label reviewLbl;
 
     private int episode;
     private int season;
@@ -41,6 +44,7 @@ public class GUIReviewController {
                 (float) rating.getRating(), Session.getCurrentSession().getViewerBean().getUsername());
         ReviewController reviewController = new ReviewController();
         reviewController.publishReview(reviewBean);
+        reviewLbl.setVisible(true);
     }
 
     public void hidePage(ActionEvent event) {

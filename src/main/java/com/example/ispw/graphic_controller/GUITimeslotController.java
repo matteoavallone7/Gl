@@ -41,17 +41,17 @@ public class GUITimeslotController {
         this.tvSeries = tvSeries;
     }
 
-    public void submitTimeslot(ActionEvent event) {
+    public void submitTimeslot() {
         MarkEpisodeController markEpisodeController = new MarkEpisodeController();
         PartiallyWatchedEpBean partiallyWatchedEpBean = new PartiallyWatchedEpBean(episode, season, tvSeries, text.getText());
         try {
             markEpisodeController.markEpAsPartiallyWatched(partiallyWatchedEpBean, banner, observer);
         } catch (InvalidFormatException e) {
             errorLbl.setText("Wrong format and/or timestamp");
+            errorLbl.setVisible(true);
             text.clear();
         }
 
-        ((Node)event.getSource()).getScene().getWindow().hide();
     }
 
 

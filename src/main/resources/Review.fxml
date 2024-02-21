@@ -60,5 +60,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <Label fx:id="reviewLbl" layoutX="26.0" layoutY="596.0" text="Review successfully submitted!" textFill="WHITE" visible="false">
+         <font>
+            <Font name="SF Pro Display Regular" size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

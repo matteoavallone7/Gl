@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
@@ -25,7 +26,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
@@ -48,13 +48,15 @@ public class GUIEpisodeDetailsController {
     @FXML
     private Label titleLbl;
 
-    @FXML
-    private Label watchedLbl;
 
     @FXML
     private VBox vBox;
     @FXML
     private ImageView epImage;
+    @FXML
+    private Label requestLbl;
+    @FXML
+    private Button inspection;
     private EpisodeBean episodeBean;
     private Observer observer;
 
@@ -139,6 +141,8 @@ public class GUIEpisodeDetailsController {
         requestBean.setRequest("Episode " + episodeBean.getId() + " of season " + episodeBean.getSeason() + " lacks music info");
         requestBean.setSeries(currentEpisode.getTvSeries());
         requestController.requestFurtherInspection(requestBean);
+        inspection.setVisible(false);
+        requestLbl.setVisible(true);
     }
 
     public void markAsWatched() {
